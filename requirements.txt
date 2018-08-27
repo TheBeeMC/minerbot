@@ -1,1 +1,1 @@
-sniper.py
+discord.py
