@@ -56,4 +56,4 @@ async def on_ready():
     print('Running discord.py v' + discord.__version__)
     bot.loop.create_task(status_task())
 
-bot.run('NDcyNjQ5MDQxOTIzMDE0Njc4.Dj2cVQ.Xtr2I8syQgGfKbUQ1vQ8xHhGFG8)
+bot.run(os.getenv('TOKEN'))
