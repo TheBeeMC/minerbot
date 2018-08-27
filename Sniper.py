@@ -1,59 +1,149 @@
-# sniper.py
 import discord
 from discord.ext import commands
 import random
-import asyncio
-import os
-import subprocess
-import logging
 
-command_prefix='+'
-bot = commands.Bot(command_prefix)
-description = 'sniper.py, coded by unpredictable'
- 
+
+class MyClient(commands.Bot):
+    async def on_ready(self):
+        print('Logged in as')
+        print(self.user.name)
+        print(self.user.id)
+        print('------')
+
+    async def on_message(self, message):
+        # we do not want the bot to reply to itself
+        if message.author.id == self.user.id:
+            return
+
+
+        if message.content.startswith('https://'):
+            await message.delete();
+
+        if message.content.startswith('https//'):
+            await message.delete();
+
+        if message.content.startswith('cunt'):
+            await message.delete();
+
+        if message.content.startswith('CUNT'):
+            await message.delete();
+
+        if message.content.startswith('FUCK'):
+            await message.delete();
+
+        if message.content.startswith('Fuck'):
+            await message.delete();
+
+        if message.content.startswith('fuck'):
+            await message.delete();
+
+        if message.content.startswith('asshole'):
+            await message.delete();
+
+        if message.content.startswith('ASSHOLE'):
+            await message.delete();
+
+        if message.content.startswith('Loser'):
+            await message.delete();
+
+        if message.content.startswith('LOSER'):
+            await message.delete();
+
+        if message.content.startswith('kys'):
+            await message.delete();
+
+        if message.content.startswith('KYS'):
+            await message.delete();
+
+        if message.content.startswith('WHORE'):
+            await message.delete();
+
+        if message.content.startswith('whore'):
+            await message.delete();
+
+        if message.content.startswith('BITCH'):
+            await message.delete();
+
+        if message.content.startswith('bitch'):
+            await message.delete();
+
+        if message.content.startswith('NIGGER'):
+            await message.delete();
+
+        if message.content.startswith('nigger'):
+            await message.delete();
+
+        if message.content.startswith('fag'):
+            await message.delete();
+
+        if message.content.startswith('faggot'):
+            await message.delete();
+
+        if message.content.startswith('FAG'):
+            await message.delete();
+
+        if message.content.startswith('FAGGOT'):
+            await message.delete();
+
+        if message.content.startswith('Faggot'):
+            await message.delete();
+
+
+        if message.content.startswith('status'):
+            await message.channel.send('Miner status: 🔴 Offline')
+
+
+        if message.content.startswith('partner'):
+            await message.channel.send('If you would like to partner please contact a Council staff or a Staff Member')
+            await message.channel.send('We only accept partners around 40-50 channels minimum!')
+            await message.channel.send('Remember that Miner Bot is a free discord bot!')
+            await message.channel.send('If you spam the owner to partner you will be banned from the discord')
+            await message.channel.send('Any suicidal / sexual discords or fake giveaways money will not be accepteble')
+            await message.channel.send('And we will not partner with those kinds of servers')
+
+        if message.content.startswith('ping'):
+            await message.channel.send('Pong 🏓')
+
+        if message.content.startswith('$test'):
+            await message.channel.send('⛏  ***INVITE REWARDS***  ⛏')
+            await message.channel.send('Invite 20 people to get Donators™')
+            await message.channel.send('Donators has access to special commands, private servers, Private giveaways')
+            await message.channel.send('Invite 50 people to get Ruby')
+            await message.channel.send('Ruby has access to everything Donators has and access to Clash of Rescue capes and custom skins and gems')
+            await message.channel.send('To get Premium it will cost 5$ PayPal')
+            await message.channel.send('Has access to All Donator and Ruby perks! + Custom Private servers Clash of Rescue and partner cape, and more!')
+
+        if message.content.startswith('$grind'):
+            await message.channel.send('Guess any number. If you are correct you get gems [Remember it can be any numbers from 1 to 100000000] ***Miner bot made by @Captain#2713***')
+
+            def is_correct(m):
+                return m.author == message.author and m.content.isdigit()
+
+            answer = random.randint(1, 1000)
+
+            try:
+                guess = await self.wait_for('message', check=is_correct, timeout=5.0)
+            except asyncio.TimeoutError:
+                return await message.channel.send('Sorry, you took too long it was {}.'.format(answer))
+
+            if int(guess.content) == answer:
+                await message.channel.send('Correct you have got 10 gems! To claim take a [screenshot and send it to a staff member so they can add it into #grind-gems-list] ***Miner bot made by @Captain#2713***')
+            else:
+                await message.channel.send('Sorry you have not got any gems! Better luck next time ***Miner bot made by @Captain#2713***')
+
+bot = MyClient(command_prefix="$")
+
 @bot.event
-async def on_message(message):
-    if message.content.startswith('+snipeadd'):
-            embed = discord.Embed(title="Let's walk you through the process of queueing a snipe.", description="DM the bot with 'beginqueue' to queue your snipe.", colour=0x1a94f0)
-            embed.set_author(name="Thanks for choosing sniper.py!", icon_url="")
-            embed.add_field(name="Enjoy your new name!", value="-trinity and iliyan")
-            embed.set_footer(text="sniper.py™ © coded by unpredictable")
-            await bot.send_message(message.channel, embed=embed)
-
-    if message.content.startswith('+help'):
-        embed=discord.Embed(title="+snipeadd: queues a snipe", description="+invite: Prints an invite link for the bot.", color=0x1a94f0)
-        embed.set_author(name='Commands', icon_url="")
-        embed.add_field(name="+help: Brings up list of commands", value="+info: Prints info about the bot.", inline=True)
-        embed.set_footer(text='coded by unpredictable')
-        await bot.send_message(message.channel, embed=embed)
-
-    if message.content.startswith('+invite'):
-        await bot.send_message(message.channel, "**Here's the invite for the bot:** INVITE")
-        print('Bot has been added to new server')
-
-    if message.content.startswith('+info'):
-        await bot.send_message(message.channel, "Coded by unpredictable. Bot hosted on Heroku, coded with python3 and Discord.PY.")
-
-async def status_task():
-    while True:
-        await bot.change_presence(game=discord.Game(name="with og names"))
-        await asyncio.sleep(10)
-        await bot.change_presence(game=discord.Game(name="+help | coded by ili"))
-        await asyncio.sleep(10)
-        await bot.change_presence(game=discord.Game(name="with my sniper"))
-        await asyncio.sleep(10)
-        await bot.change_presence(game=discord.Game(name="with a fidget spinner"))
-        await asyncio.sleep(10)
+async def on_member_join(self, member):
+    guild = member.guild
+    if guild.system_channel is not None:
+        to_send = 'Welcome {0.mention} to {1.name}!'.format(member, guild)
+        await guild.system_channel.send(to_send)
 
 @bot.event
 async def on_ready():
-    print('sniper.py coded by unpredictable')
-    print('------')
-    print('INFO')
-    print('------')
-    print('Logged in as: ' + bot.user.name + ', ' + bot.user.id)
-    print('------')
-    print('Running discord.py v' + discord.__version__)
-    bot.loop.create_task(status_task())
+    await bot.change_presence(activity=discord.Game(name="& Cave mining ⛏"))
+
+
 
 bot.run(os.getenv('TOKEN'))
