@@ -27,9 +27,14 @@ async def on_message(message):
         embed.set_footer(text='coded by unpredictable')
         await bot.send_message(message.channel, embed=embed)
 
-    if message.content.startswith('+invite'):
-        await bot.send_message(message.channel, "**Here's the invite for the bot:** INVITE")
-        print('Bot has been added to new server')
+    if message.content.startswith('!build.gradle'):
+        await bot.send_message(message.channel, "https://imgur.com/a/31XNU0G")
+       
+    if message.content.startswith('!eval channel.sendMessage("line 1\nline 2");'):
+        await bot.send_message(message.channel, "line 1")
+        await bot.send_message(message.channel, "line 2")       
+       
+       
 
     if message.content.startswith('?tag twitter'):
         await bot.send_message(message.channel, "https://twitter.com/PaintToolApp")
