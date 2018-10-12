@@ -27,8 +27,12 @@ async def on_message(message):
         embed.set_footer(text='coded by unpredictable')
         await bot.send_message(message.channel, embed=embed)
 
+    if message.content.startswith('!docs embed'):
+        await bot.send_message(message.channel, "No Result found!")
+      
     if message.content.startswith('!build.gradle'):
-        await bot.send_message(message.channel, "https://imgur.com/a/31XNU0G")
+        await bot.send_message(message.channel, "https://imgur.com/a/31XNU0G")      
+      
        
     if message.content.startswith('!eval channel.sendMessage("line 1\nline 2");'):
         await bot.send_message(message.channel, "line 1")
