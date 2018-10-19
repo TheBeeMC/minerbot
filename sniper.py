@@ -43,16 +43,8 @@ async def on_message(message):
     if message.content.startswith('?tag twitter'):
         await bot.send_message(message.channel, "https://twitter.com/PaintToolApp")
 
-async def status_task():
-    while True:
-        await bot.change_presence(game=discord.Game(name="with og names"))
-        await asyncio.sleep(10)
-        await bot.change_presence(game=discord.Game(name="+help | coded by ili"))
-        await asyncio.sleep(10)
-        await bot.change_presence(game=discord.Game(name="with my sniper"))
-        await asyncio.sleep(10)
-        await bot.change_presence(game=discord.Game(name="with a fidget spinner"))
-        await asyncio.sleep(10)
+async def on_ready():
+     await bot.change presence(game=discord.game(name='What is your highest score?'))
 
 @bot.event
 async def on_ready():
