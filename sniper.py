@@ -43,11 +43,11 @@ async def on_message(message):
     if message.content.startswith('?tag twitter'):
         await bot.send_message(message.channel, "https://twitter.com/PaintToolApp")
 
-async def on_ready():
-     await bot.change_status(game=discord.Game(name='What is your highest score?'))
+
 
 @bot.event
 async def on_ready():
+    await bot.change_status(game=discord.Game(name='What is your highest score?'))
     print('sniper.py coded by unpredictable')
     print('------')
     print('INFO')
