@@ -14,9 +14,8 @@ description = 'sniper.py, coded by unpredictable'
 @bot.event
 async def on_message(message):
     if message.content.startswith('+currentleaderboards'):
-            embed = discord.Embed(title="What is your highest score?", description="Number 1: grrwa with 40 Points", colour=0x1a94f0)
+            embed = discord.Embed(title="What is your highest score?", description="Every week I post out the Leaderboards on who got the top score.", colour=0x1a94f0)
             embed.set_author(name="Current Leaderboard Status", icon_url="")
-            embed.add_field(name="Number 2 & 3: None")
             embed.set_footer(text="Official Leaderboard Status")
             await bot.send_message(message.channel, embed=embed)
 
