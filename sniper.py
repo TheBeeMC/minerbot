@@ -44,7 +44,7 @@ async def on_message(message):
         await bot.send_message(message.channel, "https://twitter.com/PaintToolApp")
 
 async def on_ready():
-     await client.change_status(game=discord.Game(name='What is your highest score?'))
+     await bot.change_status(game=discord.Game(name='What is your highest score?'))
 
 @bot.event
 async def on_ready():
