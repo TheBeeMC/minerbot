@@ -35,9 +35,9 @@ async def on_message(message):
         await bot.send_message(message.channel, "https://imgur.com/a/31XNU0G")      
       
        
-    if message.content.startswith('!eval channel.sendMessage("line 1\nline 2");'):
-        await bot.send_message(message.channel, "line 1")
-        await bot.send_message(message.channel, "line 2")       
+    if message.content.startswith('.account link );'):
+        await bot.send_message(message.channel, "Successfully linked")
+        await bot.send_message(message.channel, "If you have a high score it will now be linked on #leaderboard")       
        
        
 
