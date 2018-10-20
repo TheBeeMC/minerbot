@@ -13,11 +13,12 @@ description = 'sniper.py, coded by unpredictable'
  
 @bot.event
 async def on_message(message):
-    if message.content.startswith('+currentleaderboards'):
+    if message.content.startswith('+c3x3'):
             embed = discord.Embed(title="What is your highest score?", description="Posted on Saturday, October 20, 2018", colour=0x1a94f0)
             embed.add_field(name="First Place with 50 Points: PCGame", value="2nd Place and 3rd are not registered..", inline=True)
             embed.set_author(name="Current Leaderboard Status", icon_url="")
-            embed.set_footer(text="https://i.gifer.com/JG3c.gif")
+            embed.set_footer(text="Official Leaderboard Status")
+            await bot.send_message(message.channel, "https://i.gifer.com/JG3c.gif")
             await bot.send_message(message.channel, embed=embed)
 
     if message.content.startswith('+help'):
