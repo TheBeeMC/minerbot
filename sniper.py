@@ -21,17 +21,7 @@ async def on_message(message):
             await bot.send_message(message.channel, "https://i.gifer.com/JG3c.gif")
             await bot.send_message(message.channel, embed=embed)
 
-
-
-    if message.content.startswith('Hi'):
-        await bot.send_message(message.channel, "Hello there")
       
-    if message.content.startswith('Hello'):
-        await bot.send_message(message.channel, "Hello there")
-      
-      
-    if message.content.startswith('oof'):
-        await bot.send_message(message.channel, "OOFING in Super Dash")           
       
        
     if message.content.startswith('.leaderboard top'):
