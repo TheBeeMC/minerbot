@@ -13,9 +13,9 @@ description = 'sniper.py, coded by unpredictable'
  
 @bot.event
 async def on_message(message):
-    if message.content.startswith('+c3x3'):
-            embed = discord.Embed(title="What is your highest score?", description="Posted on Saturday, October 20, 2018", colour=0x1a94f0)
-            embed.add_field(name="First Place with 200 Points: Commit", value="2nd Place with 106 Points: Paradise", inline=True)
+    if message.content.startswith('+listlead'):
+            embed = discord.Embed(title="What is your highest score?", description="Posted on Sunday, October 21, 2018", colour=0x1a94f0)
+            embed.add_field(name="First Place with 500 Points: Commit", value="2nd Place with 374 Points: PCGame & 3rd Place with 106 Points: Paradise", inline=True)
             embed.set_author(name="Current Leaderboard Status", icon_url="")
             embed.set_footer(text="Official Leaderboard Status")
             await bot.send_message(message.channel, "https://i.gifer.com/JG3c.gif")
@@ -35,8 +35,8 @@ async def on_message(message):
         await bot.send_message(message.channel, "https://imgur.com/a/31XNU0G")      
       
        
-    if message.content.startswith('.account link );'):
-        await bot.send_message(message.channel, "Successfully linked")
+    if message.content.startswith('.account link '):
+        await bot.send_message(message.channel, "Successfully linked as PCGame")
         await bot.send_message(message.channel, "If you have a high score it will now be linked on #leaderboard")       
        
        
