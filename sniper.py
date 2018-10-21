@@ -21,28 +21,26 @@ async def on_message(message):
             await bot.send_message(message.channel, "https://i.gifer.com/JG3c.gif")
             await bot.send_message(message.channel, embed=embed)
 
-    if message.content.startswith('+help'):
-        embed=discord.Embed(title="+snipeadd: queues a snipe", description="+invite: Prints an invite link for the bot.", color=0x1a94f0)
-        embed.set_author(name='Commands', icon_url="")
-        embed.add_field(name="+help: Brings up list of commands", value="+info: Prints info about the bot.", inline=True)
-        embed.set_footer(text='coded by unpredictable')
-        await bot.send_message(message.channel, embed=embed)
 
-    if message.content.startswith('!docs embed'):
-        await bot.send_message(message.channel, "No Result found!")
+
+    if message.content.startswith('Hi'):
+        await bot.send_message(message.channel, "Hello there")
       
-    if message.content.startswith('!build.gradle'):
-        await bot.send_message(message.channel, "https://imgur.com/a/31XNU0G")      
+    if message.content.startswith('Hello'):
+        await bot.send_message(message.channel, "Hello there")
+      
+      
+    if message.content.startswith('oof'):
+        await bot.send_message(message.channel, "OOFING in Super Dash")           
       
        
-    if message.content.startswith('.account link '):
-        await bot.send_message(message.channel, "`Not Successfully` linked")
-        await bot.send_message(message.channel, "Please check your token and try again later.")       
+    if message.content.startswith('.leaderboard top'):
+        await bot.send_message(message.channel, "Current leaderboard in the top is 500 points and is played by `Commit`")     
        
        
 
-    if message.content.startswith('?tag twitter'):
-        await bot.send_message(message.channel, "https://twitter.com/PaintToolApp")
+    if message.content.startswith('.twitter'):
+        await bot.send_message(message.channel, "https://twitter.com/SuberDashGames & https://twitter.com/pcgameapp")
 
 
 
