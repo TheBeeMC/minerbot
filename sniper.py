@@ -36,8 +36,8 @@ async def on_message(message):
       
        
     if message.content.startswith('.account link '):
-        await bot.send_message(message.channel, "Successfully linked as PCGame")
-        await bot.send_message(message.channel, "If you have a high score it will now be linked on #leaderboard")       
+        await bot.send_message(message.channel, "`Not Successfully` linked")
+        await bot.send_message(message.channel, "Please check your token and try again later.")       
        
        
 
