@@ -36,7 +36,7 @@ async def on_message(message):
 
 @bot.event
 async def on_ready():
-    await bot.change_status(game=discord.Game(name='Suber Combat'))
+    await bot.change_status(game=discord.Game(name='Brawl Combat I Blackout'))
     print('sniper.py coded by unpredictable')
     print('------')
     print('INFO')
