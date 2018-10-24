@@ -27,34 +27,26 @@ async def on_message(message):
          
       
     if message.content.startswith('.leaderboard top'):
-        await bot.send_message(message.channel, ":leaderboard: Suber Dash Leaderboard :leaderboard:")
+        await bot.send_message(message.channel, "🥇 Suber Dash Leaderboard 🥇")
         await bot.send_message(message.channel, "Top 1 with 500 points by `Commit`")      
         await bot.send_message(message.channel, "Top 2 with 257 points by `PCGame`")
         await bot.send_message(message.channel, "Top 3 with 106 points by `Paradise`")  
-        await bot.send_message(message.channel, ":leaderboard: Posted on 24/10/2018 :leaderboard:")        
+        await bot.send_message(message.channel, "🥇 Posted on 24/10/2018 🥇")        
         
     if message.content.startswith('staff'):
         await bot.send_message(message.channel, "If you need help just pm a PCGame Staff and will be on your way.")           
       
        
     if message.content.startswith('Hello'):
-        await bot.send_message(message.channel, "Hey man :D")     
+        await bot.send_message(message.channel, "Hey there 😉")     
       
-      
-    if message.content.startswith('hello'):
-        await bot.send_message(message.channel, "Hey man :D")           
-       
-
-    if message.content.startswith('Hello'):
-        await bot.send_message(message.channel, "Hey man :D")            
-       
-       
-    if message.content.startswith('hi'):
-        await bot.send_message(message.channel, "Hey man :D")            
+                 
+    if message.content.startswith('stop'):
+        await bot.send_message(message.channel, "stop what? If there is an issue pm a staff.")                
        
 
     if message.content.startswith('Hi'):
-        await bot.send_message(message.channel, "Hello there ;)")
+        await bot.send_message(message.channel, "Hello there 😉")
 
 
 
