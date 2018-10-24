@@ -26,26 +26,41 @@ async def on_message(message):
         await bot.send_message(message.channel, "What is so funny? #akward")              
          
       
-    if message.content.startswith('bot'):
-        await bot.send_message(message.channel, "There are 3 bot's I am the best bot out there tho")
-      
+    if message.content.startswith('.leaderboard top'):
+        await bot.send_message(message.channel, ":leaderboard: Suber Dash Leaderboard :leaderboard:")
+        await bot.send_message(message.channel, "Top 1 with 500 points by `Commit`")      
+        await bot.send_message(message.channel, "Top 2 with 257 points by `PCGame`")
+        await bot.send_message(message.channel, "Top 3 with 106 points by `Paradise`")  
+        await bot.send_message(message.channel, ":leaderboard: Posted on 24/10/2018 :leaderboard:")        
+        
     if message.content.startswith('staff'):
         await bot.send_message(message.channel, "If you need help just pm a PCGame Staff and will be on your way.")           
       
        
     if message.content.startswith('Hello'):
-        await bot.send_message(message.channel, "Hey man")     
+        await bot.send_message(message.channel, "Hey man :D")     
+      
+      
+    if message.content.startswith('hello'):
+        await bot.send_message(message.channel, "Hey man :D")           
        
+
+    if message.content.startswith('Hello'):
+        await bot.send_message(message.channel, "Hey man :D")            
+       
+       
+    if message.content.startswith('hi'):
+        await bot.send_message(message.channel, "Hey man :D")            
        
 
     if message.content.startswith('Hi'):
-        await bot.send_message(message.channel, "Hey man")
+        await bot.send_message(message.channel, "Hello there ;)")
 
 
 
 @bot.event
 async def on_ready():
-    await bot.change_status(game=discord.Game(name='I am probably sleeping, coding Suber Dash or I am at school or playing with friends'))
+    await bot.change_status(game=discord.Game(name='I am probably sleeping or playing with my friends or doing homework or at school.'))
     print('sniper.py coded by unpredictable')
     print('------')
     print('INFO')
