@@ -36,18 +36,12 @@ async def on_message(message):
         await bot.send_message(message.channel, "If you need help just pm a PCGame Staff and will be on your way.")           
       
        
-    if message.content.startswith('Hello'):
-        await bot.send_message(message.channel, "Hello there")     
-      
-                 
-    if message.content.startswith('Hi'):
-        await bot.send_message(message.channel, "Hi")                
+           
        
-
 
 @bot.event
 async def on_ready():
-    await bot.change_status(game=discord.Game(name='I am at school or sleeping or outside with my friends or playing games or at the beach.'))
+    await bot.change_status(game=discord.Game(name='What is your highest score?'))
     print('sniper.py coded by unpredictable')
     print('------')
     print('INFO')
