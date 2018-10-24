@@ -21,7 +21,16 @@ async def on_message(message):
             await bot.send_message(message.channel, "https://i.gifer.com/JG3c.gif")
             await bot.send_message(message.channel, embed=embed)
 
+         
+    if message.content.startswith('LOL'):
+        await bot.send_message(message.channel, "What is so funny? #akward")              
+         
       
+    if message.content.startswith('bot'):
+        await bot.send_message(message.channel, "There are 3 bot's I am the best bot out there tho")
+      
+    if message.content.startswith('staff'):
+        await bot.send_message(message.channel, "If you need help just pm a PCGame Staff and will be on your way.")           
       
        
     if message.content.startswith('Hello'):
