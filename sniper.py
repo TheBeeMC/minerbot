@@ -24,19 +24,19 @@ async def on_message(message):
       
       
        
-    if message.content.startswith('.leaderboard top'):
-        await bot.send_message(message.channel, "Current leaderboard in the top is 500 points and is played by `Commit`")     
+    if message.content.startswith('Hello'):
+        await bot.send_message(message.channel, "Hey man")     
        
        
 
-    if message.content.startswith('.twitter'):
-        await bot.send_message(message.channel, "https://twitter.com/SuberDashGames & https://twitter.com/pcgameapp")
+    if message.content.startswith('Hi'):
+        await bot.send_message(message.channel, "Hey man")
 
 
 
 @bot.event
 async def on_ready():
-    await bot.change_status(game=discord.Game(name='Brawl Combat I Blackout'))
+    await bot.change_status(game=discord.Game(name='I am probably sleeping, coding Suber Dash or I am at school or playing with friends'))
     print('sniper.py coded by unpredictable')
     print('------')
     print('INFO')
