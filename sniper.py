@@ -47,7 +47,7 @@ async def on_message(message):
 
 @bot.event
 async def on_ready():
-    await bot.change_status(game=discord.Game(name='I am probably sleeping or playing with my friends or doing homework or at school.'))
+    await bot.change_status(game=discord.Game(name='At school'))
     print('sniper.py coded by unpredictable')
     print('------')
     print('INFO')
