@@ -24,7 +24,7 @@ async def on_message(message):
          
     
              
-    if message.content.startswith('!profile '):
+    if message.content.startswith('!profile'):
         await bot.send_message(message.channel, "Unable to find a tag linked to your discord account. Please save your tag and try it again.")   
       
       
