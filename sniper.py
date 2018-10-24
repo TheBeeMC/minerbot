@@ -22,10 +22,8 @@ async def on_message(message):
             await bot.send_message(message.channel, embed=embed)
 
          
-    if message.content.startswith('Hi'):
-        await bot.send_message(message.channel, "Hi there")       
-         
-      
+    
+             
     if message.content.startswith('!profile '):
         await bot.send_message(message.channel, "Unable to find a tag linked to your discord account. Please save your tag and try it again.")   
       
@@ -42,8 +40,8 @@ async def on_message(message):
         await bot.send_message(message.channel, "Hello there")     
       
                  
-    if message.content.startswith('stop'):
-        await bot.send_message(message.channel, "stop what? If there is an issue pm a staff.")                
+    if message.content.startswith('Hi'):
+        await bot.send_message(message.channel, "Hi")                
        
 
 
