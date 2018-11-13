@@ -58,12 +58,11 @@ async def on_message(message):
     if message.content.startswith('/info'):
         await bot.send_message(message.channel, "https://imgur.com/a/I5QIaEV")
 
-async def status_task():
-    while True:
-        await bot.change_presence(game=discord.Game(name="Miner"))
+
 
 @bot.event
 async def on_ready():
+    await bot.change_presence(game=discord.Game(name="Hide My Password"))
     print('Miner Bot™ @ coded by Captain#2713')
     print('------')
     print('INFO')
