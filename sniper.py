@@ -62,7 +62,7 @@ async def on_message(message):
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(game=discord.Game(name="Hide My Password"))
+    await bot.change_presence(game=discord.Game(name="Trusted by Millions in the world."))
     print('Miner Bot™ @ coded by Captain#2713')
     print('------')
     print('INFO')
