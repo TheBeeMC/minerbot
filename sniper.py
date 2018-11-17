@@ -59,14 +59,11 @@ async def on_message(message):
         await bot.send_message(message.channel, "Hello there,")        
         
 
-    if message.content.startswith('Hi'):
-        await bot.send_message(message.channel, "Hi there,")
-
 
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(game=discord.Game(name="At a friend's house or sleeping or doing homework or outside or eating lunch."))
+    await bot.change_presence(game=discord.Game(name="With Nikki or at a friends house or sleeping or doing homework or outside or eating lunch."))
     print('Miner Bot™ @ coded by Captain#2713')
     print('------')
     print('INFO')
