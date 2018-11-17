@@ -53,16 +53,20 @@ async def on_message(message):
         embed.set_author(name='***Server Rules***', icon_url="")
         embed.add_field(name=":thumbsdown: The following is 100% prohibited:", value="Please respect the rules", inline=True)
         embed.set_footer(text='Thread posted by Captain#2713')
-        await bot.send_message(message.channel, embed=embed)         
+        await bot.send_message(message.channel, embed=embed)
+        
+    if message.content.startswith('Hello'):
+        await bot.send_message(message.channel, "Hello there,")        
+        
 
-    if message.content.startswith('/info'):
-        await bot.send_message(message.channel, "https://imgur.com/a/I5QIaEV")
+    if message.content.startswith('Hi'):
+        await bot.send_message(message.channel, "Hi there,")
 
 
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(game=discord.Game(name="https://discord.gg/4vSDNXV"))
+    await bot.change_presence(game=discord.Game(name="At a friend's house or sleeping or doing homework or outside or eating lunch."))
     print('Miner Bot™ @ coded by Captain#2713')
     print('------')
     print('INFO')
