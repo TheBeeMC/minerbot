@@ -17,7 +17,7 @@ bot = commands.Bot(command_prefix='/')
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(game=discord.Game(name="With Nikki or at a friends house or sleeping or doing homework or outside or eating lunch."))
+    await bot.change_presence(game=discord.Game(name=""))
     print('Miner Bot™ @ coded by Captain#2713')
     print('------')
     print('INFO')
