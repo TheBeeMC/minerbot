@@ -1,64 +1,38 @@
+# These are the dependecies. The bot depends on these to function, hence the name. Please do not change these unless your adding to them, because they can break the bot.
 import discord
+import asyncio
+from discord.ext.commands import Bot
 from discord.ext import commands
-import random
+import platform
 
-description = '''An example bot to showcase the discord.ext.commands extension
-module.
-There are a number of utility commands being showcased here.'''
-bot = commands.Bot(command_prefix='?', description=description)
+# Here you can modify the bot's prefix and description and wether it sends help in direct messages or not.
+client = Bot(description="Basic Bot by Habchy#1665", command_prefix="PUT YOUR PREFIX HERE", pm_help = False)
 
-@bot.event
+# This is what happens everytime the bot launches. In this case, it prints information like server count, user count the bot is connected to, and the bot id in the console.
+# Do not mess with it because the bot can break, if you wish to do so, please consult me or someone trusted.
+@client.event
 async def on_ready():
-    print('Logged in as')
-    print(bot.user.name)
-    print(bot.user.id)
-    print('------')
+	print('Logged in as '+client.user.name+' (ID:'+client.user.id+') | Connected to '+str(len(client.servers))+' servers | Connected to '+str(len(set(client.get_all_members())))+' users')
+	print('--------')
+	print('Current Discord.py Version: {} | Current Python Version: {}'.format(discord.__version__, platform.python_version()))
+	print('--------')
+	print('Use this link to invite {}:'.format(client.user.name))
+	print('https://discordapp.com/oauth2/authorize?client_id={}&scope=bot&permissions=8'.format(client.user.id))
+	print('--------')
+	print('Support Discord Server: https://discord.gg/FNNNgqb')
+	print('Github Link: https://github.com/Habchy/BasicBot')
+	print('--------')
+	print('You are running BasicBot v2.1') #Do not change this. This will really help us support you, if you need support.
+	print('Created by Habchy#1665')
+	return await client.change_presence(game=discord.Game(name='PLAYING STATUS HERE')) #This is buggy, let us know if it doesn't work.
 
-@bot.command()
-async def add(ctx, left: int, right: int):
-    """Adds two numbers together."""
-    await ctx.send(left + right)
+# This is a basic example of a call and response command. You tell it do "this" and it does it.
+@client.command()
+async def ping(*args):
 
-@bot.command()
-async def roll(ctx, dice: str):
-    """Rolls a dice in NdN format."""
-    try:
-        rolls, limit = map(int, dice.split('d'))
-    except Exception:
-        await ctx.send('Format has to be in NdN!')
-        return
-
-    result = ', '.join(str(random.randint(1, limit)) for r in range(rolls))
-    await ctx.send(result)
-
-@bot.command(description='For when you wanna settle the score some other way')
-async def choose(ctx, *choices: str):
-    """Chooses between multiple choices."""
-    await ctx.send(random.choice(choices))
-
-@bot.command()
-async def repeat(ctx, times: int, content='repeating...'):
-    """Repeats a message multiple times."""
-    for i in range(times):
-        await ctx.send(content)
-
-@bot.command()
-async def joined(ctx, member: discord.Member):
-    """Says when a member joined."""
-    await ctx.send('{0.name} joined in {0.joined_at}'.format(member))
-
-@bot.group()
-async def cool(ctx):
-    """Says if a user is cool.
-    In reality this just checks if a subcommand is being invoked.
-    """
-    if ctx.invoked_subcommand is None:
-        await ctx.send('No, {0.subcommand_passed} is not cool'.format(ctx))
-
-@cool.command(name='bot')
-async def _bot(ctx):
-    """Is the bot cool?"""
-    await ctx.send('Yes, the bot is cool.')
-
-
-bot.run(os.getenv('TOKEN'))
+	await client.say(":ping_pong: Pong!")
+	await asyncio.sleep(3)
+	await client.say(":warning: This bot was created by **Habchy#1665**, it seems that you have not modified it yet. Go edit the file and try it out!")
+# After you have modified the code, feel free to delete the line above so it does not keep popping up everytime you initiate the ping commmand.
+	
+client.run(os.getenv('TOKEN'))
