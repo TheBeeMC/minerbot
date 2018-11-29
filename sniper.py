@@ -25,7 +25,7 @@ async def on_ready():
 	print('--------')
 	print('You are running BasicBot v2.1') #Do not change this. This will really help us support you, if you need support.
 	print('Created by Habchy#1665')
-	return await client.change_presence(game=discord.Game(name='PLAYING STATUS HERE')) #This is buggy, let us know if it doesn't work.
+	return await client.change_presence(game=discord.Game(name='C:\Users\Discord')) #This is buggy, let us know if it doesn't work.
 
 # This is a basic example of a call and response command. You tell it do "this" and it does it.
 @client.command()
