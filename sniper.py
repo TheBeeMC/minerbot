@@ -7,7 +7,7 @@ from discord.ext import commands
 import platform
 
 # Here you can modify the bot's prefix and description and wether it sends help in direct messages or not.
-client = Bot(description="Basic Bot by Habchy#1665", command_prefix="PUT YOUR PREFIX HERE", pm_help = False)
+client = Bot(description="Basic Bot by Habchy#1665", command_prefix="!", pm_help = true)
 
 # This is what happens everytime the bot launches. In this case, it prints information like server count, user count the bot is connected to, and the bot id in the console.
 # Do not mess with it because the bot can break, if you wish to do so, please consult me or someone trusted.
@@ -33,7 +33,6 @@ async def ping(*args):
 
 	await client.say(":ping_pong: Pong!")
 	await asyncio.sleep(3)
-	await client.say(":warning: This bot was created by **Habchy#1665**, it seems that you have not modified it yet. Go edit the file and try it out!")
 # After you have modified the code, feel free to delete the line above so it does not keep popping up everytime you initiate the ping commmand.
 	
 client.run(os.getenv('TOKEN'))
