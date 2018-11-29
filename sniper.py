@@ -7,7 +7,7 @@ from discord.ext import commands
 import platform
 
 # Here you can modify the bot's prefix and description and wether it sends help in direct messages or not.
-client = Bot(description="Basic Bot by Habchy#1665", command_prefix="!", pm_help = true)
+client = Bot(description="Basic Bot by Habchy#1665", command_prefix="!", pm_help = false)
 
 # This is what happens everytime the bot launches. In this case, it prints information like server count, user count the bot is connected to, and the bot id in the console.
 # Do not mess with it because the bot can break, if you wish to do so, please consult me or someone trusted.
