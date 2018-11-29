@@ -1,113 +1,73 @@
+# sniper.py
 import discord
-import logging
+from discord.ext import commands
+import random
 import asyncio
-# Required imports for this bot to work.
+import os
+import subprocess
+import logging
 
-client = discord.Client()
-# Defines the discord client.
+bot = commands.Bot(command_prefix='/')
 
-name = "EmbedBot"
-prefix = "-"
-# Some definitions for this bots own usage.
-
-logging.basicConfig(level=logging.INFO)
-# Sets the logging level.
-
-@client.event
-async def on_ready():
-    await client.change_presence(game=discord.Game(name=prefix + "e"))
-    print("-------------")
-    print(name + ". Running as " + client.user.name + " with the ID " + client.user.id + ".")
-    print("-------------")
-# Shows message on boot and sets game.
-
-async def ez(message):
-    try:
-        await client.delete_message(message)
-    except:
-        pass
-    InitMsg = await client.send_message(message.channel, "What would you like the title of the embed to be? If you do not want one, type X.")
-    title = await client.wait_for_message(author=message.author, timeout=60)
-    try:
-        await client.delete_message(title)
-    except:
-        pass
-    await client.edit_message(InitMsg, "What do you want the description to be? If you do not want one, type X.")
-    desc = await client.wait_for_message(author=message.author, timeout=60)
-    try:
-        await client.delete_message(desc)
-    except:
-        pass
-    await client.edit_message(InitMsg, "What do you want the colour of the embed to be? Type white, blue, orange or red. If you want black, type X.")
-    colour = await client.wait_for_message(author=message.author, timeout=60)
-    try:
-        await client.delete_message(colour)
-    except:
-        pass
-    await client.edit_message(InitMsg, "What do you want the thumbnail picture to be? If you do not want one, press X. If you do want one, type the URL.")
-    url = await client.wait_for_message(author=message.author, timeout=60)
-    try:
-        await client.delete_message(url)
-    except:
-        pass
-    await client.edit_message(InitMsg, "What do you want the footer text to be? If you do not want one, press X. If you do want one, type the URL.")
-    footer = await client.wait_for_message(author=message.author, timeout=60)
-    try:
-        await client.delete_message(footer)
-    except:
-        pass
-    title = title.content
-    desc = desc.content
-    colour = colour.content.lower()
-    url = url.content
-    footer = footer.content
-    if title.lower() == "x":
-        title = None
-    if desc.lower() == "x":
-        desc = None
-    if footer.lower() == "x":
-        footer = None
-    if colour == "x":
-        colour = None
-    if url.lower() == "x":
-        url = None
-    if colour == None:
-        clr = 0x000000
-    elif colour == "white":
-        clr = 0xFFFFFF
-    elif colour == "blue":
-        clr = 0x0000FF
-    elif colour == "red":
-        clr = 0xFF0000
-    elif colour == "orange":
-        clr = 0xFFA500
-    else:
-        clr = 0x000000
-    e = discord.Embed(title=title, description=desc, colour=clr)
-    if not url is None:
-        e.set_thumbnail(url=url)
-    if not footer is None:
-        e.set_footer(text=footer)
-    await client.send_message(message.channel, embed=e)
-    try:
-        await client.delete_message(InitMsg)
-    except:
-        pass
-
-@client.event
+ 
+@bot.event
 async def on_message(message):
-    if message.content.startswith(prefix):
+    if message.content.startswith('/status'):
+            embed = discord.Embed(title="Miner Bot Status: 🔵 Online", description="Everything is healthy", colour=0x1a94f0)
+            embed.set_footer(text="Miner Bot™ @ coded by Captain#2713")
+            await bot.send_message(message.channel, embed=embed)
 
-        cmd = message.content.lstrip(prefix).split(' ')[0]
-        if cmd == "e":
-            print(message.author.name + " (" + message.author.id + "): \n" + message.content)
-            try:
-                await ez(message)
-            except Exception as err:
-                try:
-                    await client.send_message(message.channel, message.author.mention + "```" + str(err) + "```")
-                except:
-                    pass
-        # Chooses where your message goes.
+    if message.content.startswith('/help'):
+        embed=discord.Embed(title="***Miner Bot Help***", description="Bot Cost: 5$", color=0x1a94f0)
+        embed.set_author(name='Commands', icon_url="")
+        embed.add_field(name="***Coming soon***", value="/status to check if Miner is online", inline=True)
+        embed.set_footer(text='Miner Bot Status: 🔵 Online')
+        await bot.send_message(message.channel, embed=embed)
+        
+        
+    if message.content.startswith('/miner'):
+        embed=discord.Embed(title="https://discord.gg/kJGFfKA", description="⛏", color=0x1a94f0)
+        embed.set_author(name='Miner Bot Discord: 👷', icon_url="")
+        embed.add_field(name="https://discord.io/Miner", value="Want to buy the bot? Join our discord and pm Captain#2713", inline=True)
+        embed.set_footer(text='Miner Bot Status: 🔵 Online')
+        await bot.send_message(message.channel, embed=embed)  
+        
+    if message.content.startswith('/payment'):
+        embed=discord.Embed(title="***Miner Bot Payment**", description="Miner Bot cost 5$ and there is no refund⛏", color=0x1a94f0)
+        embed.set_author(name='Why choose Miner Bot? Because its fun and can make your server active! It can roast you and block words', icon_url="")
+        embed.add_field(name=":thumbsdown: The following is 100% prohibited:", value="Why? Because it protects it from getting it leaked", inline=True)
+        embed.set_footer(text='Thread posted by Captain#2713')
+        await bot.send_message(message.channel, embed=embed)           
 
-client.run(os.getenv('TOKEN'))
+      
+    if message.content.startswith('/rules'):
+        embed=discord.Embed(title=":unamused: Do not @ping or direct message [DM] the Staff with unsolicited messages.", description="They are people too! Please treat them as such!  Besides, repeated distraction will only delay the next update.", color=0x1a94f0)
+        embed.set_author(name='***Server Rules***', icon_url="")
+        embed.add_field(name=":thumbsdown: The following is 100% prohibited:", value="Please respect the rules", inline=True)
+        embed.set_footer(text='Thread posted by Captain#2713')
+        await bot.send_message(message.channel, embed=embed)      
+        
+        
+    if message.content.startswith('/rules'):
+        embed=discord.Embed(title=":unamused: Do not @ping or direct message [DM] the Staff with unsolicited messages.", description="They are people too! Please treat them as such!  Besides, repeated distraction will only delay the next update.", color=0x1a94f0)
+        embed.set_author(name='***Server Rules***', icon_url="")
+        embed.add_field(name=":thumbsdown: The following is 100% prohibited:", value="Please respect the rules", inline=True)
+        embed.set_footer(text='Thread posted by Captain#2713')
+        await bot.send_message(message.channel, embed=embed)         
+
+    if message.content.startswith('/info'):
+        await bot.send_message(message.channel, "https://imgur.com/a/I5QIaEV")
+
+async def status_task():
+    while True:
+        await bot.change_presence(game=discord.Game(name="Miner"))
+
+@bot.event
+async def on_ready():
+    print('Miner Bot™ @ coded by Captain#2713')
+    print('------')
+    print('INFO')
+    print('------')
+    print('Logged in as: ' + bot.user.name + ', ' + bot.user.id)
+        
+bot.run(os.getenv('TOKEN'))
