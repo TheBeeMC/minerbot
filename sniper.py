@@ -60,7 +60,7 @@ async def on_message(message):
 
 async def status_task():
     while True:
-        await bot.change_presence(game=discord.Game(name="Miner"))
+        await bot.change_presence(game=discord.Game(name=""))
 
 @bot.event
 async def on_ready():
