@@ -55,8 +55,8 @@ async def on_message(message):
         embed.set_footer(text='Thread posted by Captain#2713')
         await bot.send_message(message.channel, embed=embed)         
 
-    if message.content.startswith('/isnip13einfo'):
-        await bot.send_message(message.channel, "The name `Her` is dropping and has received 159 monthly views on `NameMC`!")
+    if message.content.startswith('/3isnip13einfos'):
+        await bot.send_message(message.channel, "`Millionth` has been queued on our query!")
 
 async def status_task():
     while True:
