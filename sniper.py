@@ -56,7 +56,7 @@ async def on_message(message):
         await bot.send_message(message.channel, embed=embed)         
 
     if message.content.startswith('/3isnip13einfos'):
-        await bot.send_message(message.channel, "`Millionth` has been queued on our query!")
+        await bot.send_message(message.channel, "The name `Heavily` is being dropped on 11/12/2018 @ 15:28:42 and has been queued.")
 
 async def status_task():
     while True:
