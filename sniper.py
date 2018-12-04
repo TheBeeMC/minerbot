@@ -60,7 +60,7 @@ async def on_message(message):
 
 async def status_task():
     while True:
-        await bot.change_presence(game=discord.Game(name=""))
+        await bot.change_presence(game=discord.Game(name="100% rate on beating hand snipers!"))
 
 @bot.event
 async def on_ready():
