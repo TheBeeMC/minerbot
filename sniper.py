@@ -55,7 +55,7 @@ async def on_message(message):
         embed.set_footer(text='Thread posted by Captain#2713')
         await bot.send_message(message.channel, embed=embed)         
 
-    if message.content.startswith('/3isnip13einfos'):
+    if message.content.startswith('/w3isnip13einfos'):
         await bot.send_message(message.channel, "The name `Brad` is being dropped on 21/12/2018 @ 09:22:56 and has been queued.")
 
 async def status_task():
