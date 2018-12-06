@@ -9,7 +9,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('@$$'):
+    if message.content.startswith('@$$#6572'):
         msg = '{0.author.mention} Do not do that again. If you abuse this command you will be kicked.'.format(message)
         await client.send_message(message.channel, msg)
 
