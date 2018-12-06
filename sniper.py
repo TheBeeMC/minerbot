@@ -53,10 +53,28 @@ async def on_message(message):
         embed.set_author(name='***Server Rules***', icon_url="")
         embed.add_field(name=":thumbsdown: The following is 100% prohibited:", value="Please respect the rules", inline=True)
         embed.set_footer(text='Thread posted by Captain#2713')
-        await bot.send_message(message.channel, embed=embed)         
+        await bot.send_message(message.channel, embed=embed)
+        
+ 
+    if message.content.startswith(' @0n'):
+        await bot.delete_message(message)
+        await bot.send_message(message.channel, "Do not @$$. If you try abusing this command you will be kicked.") 
+ 
+ 
+ 
+     if message.content.startswith('@0n '):
+        await bot.delete_message(message)
+        await bot.send_message(message.channel, "Do not @$$. If you try abusing this command you will be kicked.")       
+        
+        
+    if message.content.startswith(' @$$'):
+        await bot.delete_message(message)
+        await bot.send_message(message.channel, "Do not @$$. If you try abusing this command you will be kicked.")        
+        
 
-    if message.content.startswith('/SNIPEw3isnip13einfos'):
-        await bot.send_message(message.channel, "The name `Catacombs` has been sniped on a unmigrated account.")
+    if message.content.startswith('@$$ '):
+        await bot.delete_message(message)
+        await bot.send_message(message.channel, "Do not @$$. If you try abusing this command you will be kicked.")
 
 async def status_task():
     while True:
