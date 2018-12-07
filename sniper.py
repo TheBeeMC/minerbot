@@ -10,7 +10,7 @@ async def on_message(message):
         return
 
     if message.content.startswith('.iamahuman'):
-        msg = '{0.author.mention} We are now checking if you are a human. This could take up too 24 hours.'.format(message)
+        msg = '{0.author.mention} [MCProSniper] I now checking if you are a human. This could take up too 24 hours. .'.format(message)
         await client.send_message(message.channel, msg)
 
 @client.event
