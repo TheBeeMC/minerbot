@@ -9,8 +9,8 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('.pending'):
-        msg = '{0.author.mention} Pending waiting room! you have been queued in the waiting line!'.format(message)
+    if message.content.startswith('.iamahuman'):
+        msg = '{0.author.mention} We are now checking if you are a human. This could take up too 24 hours.'.format(message)
         await client.send_message(message.channel, msg)
 
 @client.event
