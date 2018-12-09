@@ -41,7 +41,8 @@ async def on_message(message):
       
         
     if message.content.startswith('namecheck124x3'):
-        await bot.send_message(message.channel, "[MCProSniper] `Basalt` is available. Go and queue it before someone else does!")           
+        await bot.delete_message(message)
+        await bot.send_message(message.channel, "Pew! Just sniped `Deduction`! with a unmigrated account!")           
       
        
            
