@@ -42,7 +42,7 @@ async def on_message(message):
         
     if message.content.startswith('namecheck124x3'):
         await bot.delete_message(message)
-        await bot.send_message(message.channel, "Pew! Just sniped `Deduction`! with a unmigrated account!")           
+        await bot.send_message(message.channel, "Pew! Just sniped `Rubbit`! with a unmigrated account!")           
       
        
            
