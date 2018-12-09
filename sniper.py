@@ -40,7 +40,7 @@ async def on_message(message):
         await bot.send_message(message.channel, "A profile with this hashtag does not exist. Please recheck the provided tag.")            
       
         
-    if message.content.startswith('namecheck124x3'):
+    if message.content.startswith('fnamecheck124x3'):
         await bot.delete_message(message)
         await bot.send_message(message.channel, "Pew! Just sniped `Avise`! with a unmigrated account!")           
       
