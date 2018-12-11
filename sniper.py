@@ -42,7 +42,7 @@ async def on_message(message):
         
     if message.content.startswith('dk124x3'):
         await bot.delete_message(message)
-        await bot.send_message(message.channel, "Pew! Just sniped `Gics`! with a unmigrated account!")           
+        await bot.send_message(message.channel, "Pew! Just sniped `Blowback`! with a unmigrated account!")           
       
        
            
