@@ -36,7 +36,8 @@ async def on_message(message):
       
       
     if message.content.startswith('0x34144910939x0319044'):
-        await self.bot.add_role('Verified')
+        role = discord.utils.get(server.roles, name="Verified")
+        await client.add_roles(member, role)
         await bot.send_message(message.channel, "A captcha with this code exist. You have been verified.")            
       
         
@@ -50,7 +51,7 @@ async def on_message(message):
 
 @bot.event
 async def on_ready():
-    await bot.change_status(game=discord.Game(name='Sniping name as desired'))
+    await bot.change_status(game=discord.Game(name='Sniping name...'))
     print('sniper.py coded by unpredictable')
     print('------')
     print('INFO')
