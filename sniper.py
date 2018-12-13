@@ -13,11 +13,11 @@ description = 'sniper.py, coded by unpredictable'
  
 @bot.event
 async def on_message(message):
-    if message.content.startswith('https://'):
+    if message.content.startswith('.java verify'):
             await bot.delete_message(message)
-            embed = discord.Embed(title="MCProSniper Warning system", description="You have been warned for posting links", colour=0x1a94f0)
-            embed.add_field(name="This could cause because of serveral reasons such as:", value="Virus/NSFW/Ip Tracker etc", inline=True)
-            embed.set_author(name=":alert:", icon_url="")
+            embed = discord.Embed(title="public class Discord Captcha", description="captchaDetails.put(Human Verification)", colour=0x1a94f0)
+            embed.add_field(name="System.out.println(==> Please type what is down below)", value="Type: 0x34144910939x0319044", inline=True)
+            embed.set_author(name="import java.discord;", icon_url="")
             embed.set_footer(text="")
             await bot.send_message(message.channel, embed=embed)
 
