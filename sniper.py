@@ -3,7 +3,6 @@ import discord
 from discord.ext import commands
 import random
 import asyncio
-import utils
 import os
 import subprocess
 import logging
@@ -37,9 +36,7 @@ async def on_message(message):
       
       
     if message.content.startswith('0x34144910939x0319044'):
-        role = discord.utils.get(server.roles, name="Verified")
-        await bot.add_roles(member, role)
-        await bot.send_message(message.channel, "A captcha with this code exist. You have been verified.")            
+        await bot.send_message(message.channel, "A captcha with this code does not exist. Please try again later.")            
       
         
     if message.content.startswith('xk124x3'):
