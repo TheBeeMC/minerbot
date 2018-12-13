@@ -3,6 +3,7 @@ import discord
 from discord.ext import commands
 import random
 import asyncio
+import utils
 import os
 import subprocess
 import logging
@@ -37,7 +38,7 @@ async def on_message(message):
       
     if message.content.startswith('0x34144910939x0319044'):
         role = discord.utils.get(server.roles, name="Verified")
-        await client.add_roles(member, role)
+        await bot.add_roles(member, role)
         await bot.send_message(message.channel, "A captcha with this code exist. You have been verified.")            
       
         
@@ -51,7 +52,7 @@ async def on_message(message):
 
 @bot.event
 async def on_ready():
-    await bot.change_status(game=discord.Game(name='Sniping name...'))
+    await bot.change_status(game=discord.Game(name='Testing'))
     print('sniper.py coded by unpredictable')
     print('------')
     print('INFO')
