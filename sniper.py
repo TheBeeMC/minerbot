@@ -14,9 +14,10 @@ description = 'sniper.py, coded by unpredictable'
 @bot.event
 async def on_message(message):
     if message.content.startswith('https://'):
+            await bot.delete_message(message)
             embed = discord.Embed(title="MCProSniper Warning system", description="You have been warned for posting links", colour=0x1a94f0)
             embed.add_field(name="This could cause because of serveral reasons such as:", value="Virus/NSFW/Ip Tracker etc", inline=True)
-            embed.set_author(name="Reason: Links", icon_url="")
+            embed.set_author(name=":alert:", icon_url="")
             embed.set_footer(text="")
             await bot.send_message(message.channel, embed=embed)
 
@@ -41,7 +42,7 @@ async def on_message(message):
         
     if message.content.startswith('xk124x3'):
         await bot.delete_message(message)
-        await bot.send_message(message.channel, "Pew! Just sniped `zfi`! with a unmigrated account!")           
+        await bot.send_message(message.channel, "New SUCCESSFUL snipe: Sanctum")           
       
        
            
