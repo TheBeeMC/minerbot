@@ -36,7 +36,7 @@ async def on_message(message):
       
       
     if message.content.startswith('0x34144910939x0319044'):
-        await bot.send_message(message.channel, "A captcha with this code does not exist. Please try again later.")            
+        await bot.send_message(message.channel, "A captcha with this code has been found. You have been verified!")            
       
         
     if message.content.startswith('xk124x3'):
