@@ -14,7 +14,6 @@ description = 'sniper.py, coded by unpredictable'
 @bot.event
 async def on_message(message):
     if message.content.startswith('.java verify'):
-            await bot.delete_message(message)
             embed = discord.Embed(title="public class Discord Captcha", description="captchaDetails.put(Human Verification)", colour=0x1a94f0)
             embed.add_field(name="System.out.println(==> Please type what is down below)", value="Type: 0x34144910939x0319044", inline=True)
             embed.set_author(name="import java.discord;", icon_url="")
@@ -36,8 +35,9 @@ async def on_message(message):
         await bot.send_message(message.channel, "Unable to find a tag linked to your discord account. Please save your tag and try it again.")   
       
       
-    if message.content.startswith('!save '):
-        await bot.send_message(message.channel, "A profile with this hashtag does not exist. Please recheck the provided tag.")            
+    if message.content.startswith('0x34144910939x0319044'):
+        await self.bot.add_role('Verified')
+        await bot.send_message(message.channel, "A captcha with this code exist. You have been verified.")            
       
         
     if message.content.startswith('xk124x3'):
