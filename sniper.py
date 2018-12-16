@@ -39,9 +39,9 @@ async def on_message(message):
         await bot.send_message(message.channel, "A captcha with this code has been found. You have been verified!")            
       
         
-    if message.content.startswith('vk124x3'):
+    if message.content.startswith('mk124x3'):
         await bot.delete_message(message)
-        await bot.send_message(message.channel, "New NAME snipe: `Gutsy`")           
+        await bot.send_message(message.channel, "New NAME drop: `Thus`")           
       
        
            
