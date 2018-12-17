@@ -35,13 +35,14 @@ async def on_message(message):
         await bot.send_message(message.channel, "Unable to find a tag linked to your discord account. Please save your tag and try it again.")   
       
       
-    if message.content.startswith('0x34144910939x0319044'):
-        await bot.send_message(message.channel, "A captcha with this code has been found. You have been verified!")            
+    if message.content.startswith('gk124x3'):
+        await bot.delete_message(message)
+        await bot.send_message(message.channel, "New NAME drop: `Moaning`")                
       
         
-    if message.content.startswith('mk124x3'):
+    if message.content.startswith('dk124x3'):
         await bot.delete_message(message)
-        await bot.send_message(message.channel, "New NAME drop: `Thus`")           
+        await bot.send_message(message.channel, "New NAME drop: `Written`")           
       
        
            
