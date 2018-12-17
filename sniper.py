@@ -13,10 +13,10 @@ description = 'sniper.py, coded by unpredictable'
  
 @bot.event
 async def on_message(message):
-    if message.content.startswith('.java verify'):
-            embed = discord.Embed(title="public class Discord Captcha", description="captchaDetails.put(Human Verification)", colour=0x1a94f0)
-            embed.add_field(name="System.out.println(==> Please type what is down below)", value="Type: 0x34144910939x0319044", inline=True)
-            embed.set_author(name="import java.discord;", icon_url="")
+    if message.content.startswith('.ds confirm'):
+            embed = discord.Embed(title="public class Discord Confirmation", description="captchaDetails.put(Human Verification)", colour=0x1a94f0)
+            embed.add_field(name="System.out.println(==> Please wait until a staff moves you in)", value="Posted on: 12/17/2018", inline=True)
+            embed.set_author(name="import java.mcducksniper;", icon_url="")
             embed.set_footer(text="")
             await bot.send_message(message.channel, embed=embed)
 
