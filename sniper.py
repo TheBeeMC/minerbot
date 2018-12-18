@@ -55,4 +55,4 @@ async def on_ready():
     print('------')
     print('Logged in as: ' + bot.user.name + ', ' + bot.user.id)
      
-
+bot.run(os.getenv('TOKEN'))
