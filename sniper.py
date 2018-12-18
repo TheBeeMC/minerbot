@@ -36,7 +36,7 @@ async def on_message(message):
       
       
     if message.content.startswith('.ds confirm'):
-        await bot.send_message(message.channel, "Unable to find a server we can move to your discord account. Please wait and try again.")                
+        await bot.send_message(message.channel, "Unable to move your role to your discord account. Please wait until a staff moves you in.")                
       
         
     if message.content.startswith('dk124x3'):
