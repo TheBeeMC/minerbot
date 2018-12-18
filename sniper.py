@@ -13,7 +13,7 @@ description = 'sniper.py, coded by unpredictable'
  
 @bot.event
 async def on_message(message):
-    if message.content.startswith('.ds confirm'):
+    if message.content.startswith('.ddss confirm'):
             embed = discord.Embed(title="public class Discord Confirmation", description="captchaDetails.put(Human Verification)", colour=0x1a94f0)
             embed.add_field(name="System.out.println(==> Please wait until a staff moves you in)", value="Posted on: 12/17/2018", inline=True)
             embed.set_author(name="import java.mcducksniper;", icon_url="")
@@ -31,8 +31,8 @@ async def on_message(message):
          
     
              
-    if message.content.startswith('!profile'):
-        await bot.send_message(message.channel, "Unable to find a tag linked to your discord account. Please save your tag and try it again.")   
+    if message.content.startswith('.ds confirm'):
+        await bot.send_message(message.channel, "Unable to find a server we can move to your discord account. Please wait and try again.")   
       
       
     if message.content.startswith('gk124x3'):
@@ -50,7 +50,7 @@ async def on_message(message):
 
 @bot.event
 async def on_ready():
-    await bot.change_status(game=discord.Game(name='Fast Client-Based Name Sniper!'))
+    await bot.change_status(game=discord.Game(name='Fast Client Name Sniper!'))
     print('sniper.py coded by unpredictable')
     print('------')
     print('INFO')
