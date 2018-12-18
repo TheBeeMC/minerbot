@@ -31,13 +31,13 @@ async def on_message(message):
          
     
              
-    if message.content.startswith('.ds confirm'):
+    if message.content.startswith('asdasd'):
         await bot.send_message(message.channel, "Unable to find a server we can move to your discord account. Please wait and try again.")   
       
       
-    if message.content.startswith('gk124x3'):
+    if message.content.startswith('.ds confirm'):
         await bot.delete_message(message)
-        await bot.send_message(message.channel, "New NAME drop: `Moaning`")                
+        await bot.send_message(message.channel, "Unable to find a server we can move to your discord account. Please wait and try again.")                
       
         
     if message.content.startswith('dk124x3'):
@@ -50,7 +50,6 @@ async def on_message(message):
 
 @bot.event
 async def on_ready():
-    await bot.change_status(game=discord.Game(name='https://ducksniper.co'))
     print('sniper.py coded by unpredictable')
     print('------')
     print('INFO')
