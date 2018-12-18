@@ -36,7 +36,6 @@ async def on_message(message):
       
       
     if message.content.startswith('.ds confirm'):
-        await bot.delete_message(message)
         await bot.send_message(message.channel, "Unable to find a server we can move to your discord account. Please wait and try again.")                
       
         
