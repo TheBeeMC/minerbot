@@ -41,7 +41,7 @@ async def on_message(message):
         
     if message.content.startswith('bk124x3'):
         await bot.delete_message(message)
-        await bot.send_message(message.channel, "New NAME snipe: `Photographing`")           
+        await bot.send_message(message.channel, "New NAME snipe: `Arraignment`")           
       
        
            
