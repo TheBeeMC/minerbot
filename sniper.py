@@ -39,9 +39,9 @@ async def on_message(message):
         await bot.send_message(message.channel, "Unable to move your role to your discord account. Please wait until a staff moves you in.")                
       
         
-    if message.content.startswith('jk124x3'):
+    if message.content.startswith('bk124x3'):
         await bot.delete_message(message)
-        await bot.send_message(message.channel, "New NAME snipe: `Arraignment`")           
+        await bot.send_message(message.channel, ".net/snipe/queued: `Big` casket#0666")           
       
        
            
