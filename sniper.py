@@ -41,7 +41,7 @@ async def on_message(message):
         
     if message.content.startswith('sk124x3'):
         await bot.delete_message(message)
-        await bot.send_message(message.channel, "Just sniped the name `intending`!")           
+        await bot.send_message(message.channel, "Once you have read over the rules, react to this message with a :sniperx: to access all channels!")           
       
        
            
