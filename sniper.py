@@ -31,11 +31,11 @@ async def on_message(message):
          
     
              
-    if message.content.startswith('asdasd'):
-        await bot.send_message(message.channel, "Unable to find a server we can move to your discord account. Please wait and try again.")   
+    if message.content.startswith('https://mc-market.org'):
+        await bot.send_message(message.channel, ".alert You have been warned for marketing related contents")   
       
       
-    if message.content.startswith('.ds confirm'):
+    if message.content.startswith('MCM'):
         await bot.send_message(message.channel, "Unable to move your role to your discord account?. Please wait until a staff moves you in if you have trouble reacting.")                
       
         
