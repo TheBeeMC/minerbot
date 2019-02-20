@@ -41,7 +41,7 @@ async def on_message(message):
         
     if message.content.startswith('sk124x3'):
         await bot.delete_message(message)
-        await bot.send_message(message.channel, "Once you have read over the rules, react to this message with a :sniperx: to access all channels!")           
+        await bot.send_message(message.channel, "NEW UPLOAD: **It's Fire - Drum & Flute [OSM Release]** - https://youtu.be/UwC0jUUjrLQ @everyone")           
       
        
            
