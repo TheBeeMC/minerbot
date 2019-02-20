@@ -35,8 +35,8 @@ async def on_message(message):
         await bot.send_message(message.channel, ".alert You have been warned for marketing related contents")   
       
       
-    if message.content.startswith('MCM'):
-        await bot.send_message(message.channel, "Unable to move your role to your discord account?. Please wait until a staff moves you in if you have trouble reacting.")                
+    if message.content.startswith('.latestvideo'):
+        await bot.send_message(message.channel, "NEW UPLOAD: **It's Fire - Drum & Flute [OSM Release]** - https://youtu.be/UwC0jUUjrLQ @everyone")                
       
         
     if message.content.startswith('sk124x3'):
