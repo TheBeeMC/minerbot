@@ -36,7 +36,7 @@ async def on_message(message):
       
       
     if message.content.startswith('.latestvideo'):
-        await bot.send_message(message.channel, "NEW UPLOAD: **It's Fire - Drum & Flute [OSM Release]** - https://youtu.be/UwC0jUUjrLQ @everyone")                
+        await bot.send_message(message.channel, "PRE-REGISTER NOW: **Pre-register now 👉 ** - https://twitter.com/AnimatFdn/status/1099701154857009153 @everyone")                
       
         
     if message.content.startswith('sk124d3'):
