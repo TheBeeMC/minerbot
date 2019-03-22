@@ -31,8 +31,8 @@ async def on_message(message):
          
     
              
-    if message.content.startswith('https://mc-market.org'):
-        await bot.send_message(message.channel, ".alert You have been warned for marketing related contents")   
+    if message.content.startswith('asfasfas23z2'):
+        await bot.send_message(message.channel, "https://discord.gg/ClashRoyale")   
       
       
     if message.content.startswith('.latestvideo'):
