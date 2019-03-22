@@ -39,9 +39,9 @@ async def on_message(message):
         await bot.send_message(message.channel, "NEW EPISODE OUT: https://www.youtube.com/watch?v=D8mdpPQMwfU")                
       
         
-    if message.content.startswith('jk124d3'):
+    if message.content.startswith('bk124d3'):
         await bot.delete_message(message)
-        await bot.send_message(message.channel, "https://discord.gg/qwFeWck")           
+        await bot.send_message(message.channel, "**DM US** https://twitter.com/messages/compose?recipient_id=1078001631642435584")           
       
        
            
