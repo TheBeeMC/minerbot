@@ -39,9 +39,10 @@ async def on_message(message):
         await bot.send_message(message.channel, "NEW EPISODE OUT: https://www.youtube.com/watch?v=D8mdpPQMwfU")                
       
         
-    if message.content.startswith('bk124d3'):
+    if message.content.startswith('.currentstatus'):
         await bot.delete_message(message)
-        await bot.send_message(message.channel, "**DM US** https://twitter.com/messages/compose?recipient_id=1078001631642435584")           
+        await bot.send_message(message.channel, ":warning: ALERT :warning: ")
+        await bot.send_message(message.channel, "https://twitter.com/realRemiTrudel/status/1110516806207320065")           
       
        
            
