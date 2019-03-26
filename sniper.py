@@ -31,8 +31,12 @@ async def on_message(message):
          
     
              
-    if message.content.startswith('asfasfas23z2'):
-        await bot.send_message(message.channel, "https://discord.gg/ClashRoyale")   
+    if message.content.startswith('.error'):
+        await bot.send_message(message.channel, "[ROYALEGHOST PROTECTION DETECTION]")   
+        await bot.send_message(message.channel, "I banned 1 player in my latest banwave.")  
+        await bot.send_message(message.channel, "Staff has banned an additional 3 in the last 5 days!") 
+        await bot.send_message(message.channel, "Banwaves occur every 24 hours.")
+        await bot.send_message(message.channel, "Respect the rules to avoid punishement!")      
       
       
     if message.content.startswith('.latestvideo'):
