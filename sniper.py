@@ -34,7 +34,7 @@ async def on_message(message):
         await bot.send_message(message.channel, "@everyone USERNAME SET AS: Upstate has been succesfuly sniped using a unmigrated account.")                
       
         
-    if message.content.startswith('.current'):
+    if message.content.startswith('.namedrop'):
         await bot.delete_message(message)
         await bot.send_message(message.channel, "@here A NEW NAME HAS DROPPED: Scenario")        
       
