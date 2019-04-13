@@ -21,16 +21,16 @@ async def on_message(message):
             await bot.send_message(message.channel, embed=embed)
 
 
-    if message.content.startswith('.firingtime'):
-        await bot.send_message(message.channel, "As soon as available")   
+    if message.content.startswith('.specifictime'):
+        await bot.send_message(message.channel, "To pick a specific time please use the command .specific <hour/miunutes/seconds/day/year>")   
          
        
     if message.content.startswith('.beginqueue: '):
         await bot.send_message(message.channel, "The name has now been fired: Firing sniper as soon as available. Sniping usernamer on list: Unmigrated Account")         
     
              
-    if message.content.startswith('.setsnipeusername: '):
-        await bot.send_message(message.channel, "The name has been queued using the payment: Force command. Queued since the last 24 hours. ")        
+    if message.content.startswith('username: '):
+        await bot.send_message(message.channel, "The username you have given has now been placed.")        
  
     if message.content.startswith('.failedsnipe'):
         await bot.send_message(message.channel, "@everyone USERNAME SET AS: Upstate has not been succesfuly sniped due to reason: Error while executing the snipe")                
