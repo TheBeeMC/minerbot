@@ -25,8 +25,8 @@ async def on_message(message):
         await bot.send_message(message.channel, "Firing sniper in 33days 18hours 53minutes 07seconds")   
          
        
-    if message.content.startswith('.beginqueue: '):
-        await bot.send_message(message.channel, "The name has now been fired: Firing sniper as soon as available. Sniping usernamer on list: Unmigrated Account")         
+    if message.content.startswith('.assoonasavailable '):
+        await bot.send_message(message.channel, "FIRING TIME: As soon as available")         
     
              
     if message.content.startswith('username: '):
