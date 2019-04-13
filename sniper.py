@@ -21,8 +21,8 @@ async def on_message(message):
             await bot.send_message(message.channel, embed=embed)
 
 
-    if message.content.startswith('.specifictime'):
-        await bot.send_message(message.channel, "To pick a specific time please use the command .specific <hour/miunutes/seconds/day/year>")   
+    if message.content.startswith('.enter '):
+        await bot.send_message(message.channel, "Firing sniper in 33days 18hours 53minutes 07seconds")   
          
        
     if message.content.startswith('.beginqueue: '):
