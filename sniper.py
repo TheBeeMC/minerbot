@@ -36,8 +36,7 @@ async def on_message(message):
         
     if message.content.startswith('.current'):
         await bot.delete_message(message)
-        await bot.send_message(message.channel, ":warning: ALERT :warning: ")
-        await bot.send_message(message.channel, "https://twitter.com/realRemiTrudel/status/1110516806207320065")           
+        await bot.send_message(message.channel, "@here A NEW NAME HAS DROPPED: Scenario")        
       
        
            
