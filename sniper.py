@@ -26,8 +26,8 @@ async def on_message(message):
          
     
              
-    if message.content.startswith('.error'):
-        await bot.send_message(message.channel, "Firing Sniper 13/04/2019 @ 06:50:09 for Upstate")        
+    if message.content.startswith('.queueddd'):
+        await bot.send_message(message.channel, "The name above has been queued by someone on a computer and was queued with no payment. Queued since the last 24 hours.")        
       
       
     if message.content.startswith('.successsnipe'):
