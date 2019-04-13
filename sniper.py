@@ -32,15 +32,11 @@ async def on_message(message):
     
              
     if message.content.startswith('.error'):
-        await bot.send_message(message.channel, "[ROYALEGHOST PROTECTION DETECTION]")   
-        await bot.send_message(message.channel, "I banned 1 player in my latest banwave.")  
-        await bot.send_message(message.channel, "Staff has banned an additional 3 in the last 5 days!") 
-        await bot.send_message(message.channel, "Banwaves occur every 24 hours.")
-        await bot.send_message(message.channel, "Respect the rules to avoid punishement!")      
+        await bot.send_message(message.channel, "Firing Sniper 13/04/2019 @ 06:50:09")        
       
       
-    if message.content.startswith('.latestvideo'):
-        await bot.send_message(message.channel, "NEW EPISODE OUT: https://www.youtube.com/watch?v=D8mdpPQMwfU")                
+    if message.content.startswith('.usernameset'):
+        await bot.send_message(message.channel, "SET AS: Upstate")                
       
         
     if message.content.startswith('.current'):
