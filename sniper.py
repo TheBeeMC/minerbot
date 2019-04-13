@@ -45,7 +45,7 @@ async def on_message(message):
 @bot.event
 async def on_ready():
     print('sniper.py coded by unpredictable')
-    await client.change presence(game=discord.game(name='Sniping name: There is no current snipe active at the moment'))
+    await bot.change presence(game=discord.game(name='Sniping name: There is no current snipe active at the moment'))
     print('------')
     print('INFO')
     print('------')
