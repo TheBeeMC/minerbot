@@ -27,7 +27,7 @@ async def on_message(message):
     
              
     if message.content.startswith('.error'):
-        await bot.send_message(message.channel, "Firing Sniper 13/04/2019 @ 06:50:09")        
+        await bot.send_message(message.channel, "Firing Sniper 13/04/2019 @ 06:50:09 for Upstate")        
       
       
     if message.content.startswith('.usernameset'):
