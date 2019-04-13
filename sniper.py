@@ -13,7 +13,7 @@ description = 'sniper.py, coded by unpredictable'
  
 @bot.event
 async def on_message(message):
-    if message.content.startswith('.ddss confirm'):
+    if message.content.startswith('.bbbs'):
             embed = discord.Embed(title="public class name.drop", description="Details.put(Username)", colour=0x1a94f0)
             embed.add_field(name="System.out.println(==> Upstate is coming up on namemc and is not queued on chearful)", value="Posted on: 4/13/2019", inline=True)
             embed.set_author(name="Name Drop Alert @here", icon_url="")
