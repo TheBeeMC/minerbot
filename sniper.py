@@ -21,9 +21,12 @@ async def on_message(message):
             await bot.send_message(message.channel, embed=embed)
 
 
-    if message.content.startswith('.error2'):
-        await bot.send_message(message.channel, "Set Posted on 4/13/2019")   
+    if message.content.startswith('.firingtime'):
+        await bot.send_message(message.channel, "As soon as available")   
          
+       
+    if message.content.startswith('.beginqueue:'):
+        await bot.send_message(message.channel, "The name has now been fired: Firing sniper as soon as available. Sniping usernamer on list: Unmigrated Account")         
     
              
     if message.content.startswith('.setsnipeusername: '):
