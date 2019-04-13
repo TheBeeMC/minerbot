@@ -21,13 +21,8 @@ async def on_message(message):
             await bot.send_message(message.channel, embed=embed)
 
 
-    if message.content.startswith('-lfeadserbaord'):
-            embed = discord.Embed(title="TOP 3 PLAYERS", description="#1      Flam      50", colour=0x1a94f0)
-            embed.add_field(name="#2      DrHat      36", value="#3      None", inline=True)
-            embed.set_author(name="     Speed Leaderboard", icon_url="")
-            embed.set_footer(text="Official Leaderboard")
-            await bot.send_message(message.channel, "https://gyazo.com/27ae4b91b635a4569a32d922f5322865")
-            await bot.send_message(message.channel, embed=embed)
+    if message.content.startswith('.error2'):
+        await bot.send_message(message.channel, "As soon as available on: Upstate")   
          
     
              
@@ -36,7 +31,7 @@ async def on_message(message):
       
       
     if message.content.startswith('.usernameset'):
-        await bot.send_message(message.channel, "SET AS: Upstate")                
+        await bot.send_message(message.channel, "REGION set as: Canada")                
       
         
     if message.content.startswith('.current'):
