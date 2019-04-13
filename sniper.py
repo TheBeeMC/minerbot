@@ -31,7 +31,9 @@ async def on_message(message):
              
     if message.content.startswith('.setsnipeusername: '):
         await bot.send_message(message.channel, "The name has been queued using the payment: Force command. Queued since the last 24 hours. ")        
-      
+ 
+     if message.content.startswith('.failedsnipe'):
+        await bot.send_message(message.channel, "@everyone USERNAME SET AS: Upstate has not been succesfuly sniped due to reason: Error while executing the snipe")                
       
     if message.content.startswith('.successsnipe'):
         await bot.send_message(message.channel, "@everyone USERNAME SET AS: Upstate has been succesfuly sniped using a unmigrated account.")                
