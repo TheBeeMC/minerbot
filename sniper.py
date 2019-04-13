@@ -30,8 +30,8 @@ async def on_message(message):
         await bot.send_message(message.channel, "Firing Sniper 13/04/2019 @ 06:50:09 for Upstate")        
       
       
-    if message.content.startswith('.usernameset'):
-        await bot.send_message(message.channel, "REGION set as: Canada")                
+    if message.content.startswith('.successsnipe'):
+        await bot.send_message(message.channel, "@everyone USERNAME SET AS: Upstate has been succesfuly sniped using a unmigrated account.")                
       
         
     if message.content.startswith('.current'):
