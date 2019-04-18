@@ -22,8 +22,14 @@ async def on_message(message):
 
 
     if message.content.startswith('.enter '):
-        await bot.send_message(message.channel, "Firing sniper in 33days 18hours 53minutes 07seconds")   
-         
+        await bot.delete_message(message)
+        await bot.send_message(message.channel, "**Dino Quest Coming soon** - Rémi")   
+        await bot.send_message(message.channel, "@everyone")   
+        await bot.send_message(message.channel, "Hi everyone,")  
+        await bot.send_message(message.channel, "")    
+        await bot.send_message(message.channel, "Dino Quest is a upcoming game on Gelyfish Games! As you might have seen from our last post …")                  
+        await bot.send_message(message.channel, "")   
+        await bot.send_message(message.channel, "https://twitter.com/GelyfishHQ/status/1118849168414597121")   
        
     if message.content.startswith('.assoonasavailable '):
         await bot.send_message(message.channel, "FIRING TIME: As soon as available")         
