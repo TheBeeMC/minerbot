@@ -50,7 +50,7 @@ async def on_message(message):
 @bot.event
 async def on_ready():
     print('sniper.py coded by unpredictable')
-    await bot.change_status(game=discord.Game(name='Currently sniping: There are no active snipes at the current moment'))
+    await bot.change_status(game=discord.Game(name='Dino Quest'))
     print('------')
     print('INFO')
     print('------')
