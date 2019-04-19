@@ -21,7 +21,7 @@ async def on_message(message):
             await bot.send_message(message.channel, embed=embed)
 
 
-    if message.content.startswith('.gameway '):
+    if message.content.startswith('.gameway'):
         await bot.delete_message(message)
         await bot.send_message(message.channel, "@here, a new post on twitter has been posted.")                  
         await bot.send_message(message.channel, "https://twitter.com/GelyfishHQ/status/1119254060258013184")   
