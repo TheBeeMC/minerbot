@@ -41,9 +41,10 @@ async def on_message(message):
         await bot.send_message(message.channel, "SCENARIO: unmigrated account, block sniping, Firing sniper in 33days 18hours 53minutes 07seconds.")                
       
         
-    if message.content.startswith('.namedrop'):
+    if message.content.startswith('.soonfff'):
         await bot.delete_message(message)
-        await bot.send_message(message.channel, "@here A NEW NAME HAS DROPPED: Scenario")        
+        await bot.send_message(message.channel, ":clap: :clap: coming soon :clap: :clap:")    
+        await bot.send_message(message.channel, "https://www.twitlonger.com/show/n_1sqs9bt")     
       
        
            
