@@ -21,10 +21,10 @@ async def on_message(message):
             await bot.send_message(message.channel, embed=embed)
 
 
-    if message.content.startswith('.gameway'):
+    if message.content.startswith('.gameway1'):
         await bot.delete_message(message)
-        await bot.send_message(message.channel, "@here, a new post on twitter has been posted.")                  
-        await bot.send_message(message.channel, "https://twitter.com/GelyfishHQ/status/1119254060258013184")   
+        await bot.send_message(message.channel, "@here, a new post on twitter has been posted. **RELEASE DATE FOR GAMEWAY**")                  
+        await bot.send_message(message.channel, "https://twitter.com/AppGameStore/status/1119435879079141376")   
        
        
     if message.content.startswith('.assoonasavailable '):
