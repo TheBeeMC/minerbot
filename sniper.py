@@ -23,8 +23,8 @@ async def on_message(message):
 
     if message.content.startswith('.gameway1'):
         await bot.delete_message(message)
-        await bot.send_message(message.channel, "@here, a new post on twitter has been posted.")                  
-        await bot.send_message(message.channel, "https://twitter.com/GelyfishHQ/status/1119608773751058435")   
+        await bot.send_message(message.channel, ":clap: :clap: Coming soon :clap: :clap:")                  
+        await bot.send_message(message.channel, "https://www.twitlonger.com/show/n_1sqs9bt")   
        
        
     if message.content.startswith('.assoonasavailable '):
