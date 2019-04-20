@@ -52,7 +52,7 @@ async def on_message(message):
 @bot.event
 async def on_ready():
     print('sniper.py coded by unpredictable')
-    await bot.change_status(game=discord.Game(name=''))
+    await bot.change_status(game=discord.Game(name='Release Date: October 3, 2020'))
     print('------')
     print('INFO')
     print('------')
