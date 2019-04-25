@@ -27,7 +27,7 @@ async def on_message(message):
         await bot.send_message(message.channel, "https://www.twitlonger.com/show/n_1sqs9bt")   
        
        
-    if message.content.startswith('SNIPE NAME: '):
+    if message.content.startswith('queue-snipe: '):
         await bot.send_message(message.channel, "**Success**")    
         await bot.send_message(message.channel, "Your name has now been queued. ")           
     
