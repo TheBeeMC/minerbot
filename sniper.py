@@ -35,8 +35,8 @@ async def on_message(message):
     if message.content.startswith('username: '):
         await bot.send_message(message.channel, "The username you have given has now been placed.")        
  
-    if message.content.startswith('.failedsnipe'):
-        await bot.send_message(message.channel, "@everyone USERNAME SET AS: Upstate has not been succesfuly sniped due to reason: Error while executing the snipe")                
+    if message.content.startswith('.successsnipe'):
+        await bot.send_message(message.channel, "Hypervelocity has been succesfuly sniped.")                
       
     if message.content.startswith('.senario'):
         await bot.send_message(message.channel, "SCENARIO: unmigrated account, block sniping, Firing sniper in 33days 18hours 53minutes 07seconds.")                
