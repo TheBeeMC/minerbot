@@ -27,8 +27,9 @@ async def on_message(message):
         await bot.send_message(message.channel, "https://www.twitlonger.com/show/n_1sqs9bt")   
        
        
-    if message.content.startswith('.assoonasavailable '):
-        await bot.send_message(message.channel, "FIRING TIME: As soon as available")         
+    if message.content.startswith('SNIPE NAME: '):
+        await bot.send_message(message.channel, "**Success**")    
+        await bot.send_message(message.channel, "Your name has now been queued. ")           
     
              
     if message.content.startswith('username: '):
@@ -53,7 +54,7 @@ async def on_message(message):
 @bot.event
 async def on_ready():
     print('sniper.py coded by unpredictable')
-    await bot.change_status(game=discord.Game(name='Release Date: October 3, 2020'))
+    await bot.change_status(game=discord.Game(name=''))
     print('------')
     print('INFO')
     print('------')
