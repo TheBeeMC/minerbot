@@ -33,7 +33,7 @@ async def on_message(message):
     
              
     if message.content.startswith('username: '):
-        await bot.send_message(message.channel, "The username you have given has now been placed.")        
+        await bot.send_message(message.channel, "Chortle **might** be down. Chortle Servers are 0.0% Online")        
  
     if message.content.startswith('.successsnipe'):
         await bot.send_message(message.channel, "Hypervelocity has been succesfuly sniped.")                
