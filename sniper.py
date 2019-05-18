@@ -11,7 +11,6 @@ command_prefix='+'
 bot = commands.Bot(command_prefix)
 description = 'sniper.py, coded by unpredictable'
  
-
     if message.content.startswith('.gameway1'):
         await bot.delete_message(message)
         await bot.send_message(message.channel, ":clap: :clap: Coming soon :clap: :clap:")                  
