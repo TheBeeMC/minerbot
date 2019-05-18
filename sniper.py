@@ -14,12 +14,12 @@ description = 'sniper.py, coded by unpredictable'
 @bot.event
 async def on_message(message):
     if message.content.startswith('.bbbg'):
-            embed=bot.Embed(title= Welcome to the Bevydia Discord!, color=0x0000ff)
+            embed=discord.Embed(title= Welcome to the Bevydia Discord!, color=0x0000ff)
             embed.add_field(name=__*Here are all the rules and information for our server!* __, value=Check out our Twitter: https://twitter.com/Bevydia. , inline=True)
             embed.add_field(name=, value=Please take note of the channel topics at the top to find the correct , inline=False)
             embed.add_field(name=, value=channel., inline=False)
             embed.add_field(name=, value=Invite others using https://discord.gg/Nqq4fcr. , inline=False)
-            await bot.send_message(message.channel, embed=embed)
+            await self.bot.say(embed=embed)
 
 
     if message.content.startswith('.gameway1'):
