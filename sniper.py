@@ -6,48 +6,68 @@ import asyncio
 import os
 import subprocess
 import logging
-            
-command_prefix='+'
-bot = commands.Bot(command_prefix)
-description = 'sniper.py, coded by unpredictable'
+
+bot = commands.Bot(command_prefix='/')
+
  
-    if message.content.startswith('.gameway1'):
-        await bot.delete_message(message)
-        await bot.send_message(message.channel, ":clap: :clap: Coming soon :clap: :clap:")                  
-        await bot.send_message(message.channel, "https://www.twitlonger.com/show/n_1sqs9bt")   
-       
-       
-    if message.content.startswith('queue-snipe: '):
-        await bot.send_message(message.channel, "**Success**")    
-        await bot.send_message(message.channel, "Your name has now been queued. ")           
-    
-             
-    if message.content.startswith('username: '):
-        await bot.send_message(message.channel, "Chortle **might** be down. Chortle Servers are 0.0% Online")        
- 
-    if message.content.startswith('.successsnipe'):
-        await bot.send_message(message.channel, "Hypervelocity has been succesfuly sniped.")                
-      
-    if message.content.startswith('.senario'):
-        await bot.send_message(message.channel, "SCENARIO: unmigrated account, block sniping, Firing sniper in 33days 18hours 53minutes 07seconds.")                
-      
+@bot.event
+async def on_message(message):
+    if message.content.startswith('/status'):
+            embed = discord.Embed(title="Miner Bot Status: 🔵 Online", description="Everything is healthy", colour=0x1a94f0)
+            embed.set_footer(text="Miner Bot™ @ coded by Captain#2713")
+            await bot.send_message(message.channel, embed=embed)
+
+    if message.content.startswith('/help'):
+        embed=discord.Embed(title="***Miner Bot Help***", description="Bot Cost: 5$", color=0x1a94f0)
+        embed.set_author(name='Commands', icon_url="")
+        embed.add_field(name="***Coming soon***", value="/status to check if Miner is online", inline=True)
+        embed.set_footer(text='Miner Bot Status: 🔵 Online')
+        await bot.send_message(message.channel, embed=embed)
         
-    if message.content.startswith('.soonfff'):
-        await bot.delete_message(message)
-        await bot.send_message(message.channel, ":clap: :clap: coming soon :clap: :clap:")    
-        await bot.send_message(message.channel, "https://www.twitlonger.com/show/n_1sqs9bt")     
+        
+    if message.content.startswith('/miner'):
+        embed=discord.Embed(title="https://discord.gg/kJGFfKA", description="⛏", color=0x1a94f0)
+        embed.set_author(name='Miner Bot Discord: 👷', icon_url="")
+        embed.add_field(name="https://discord.io/Miner", value="Want to buy the bot? Join our discord and pm Captain#2713", inline=True)
+        embed.set_footer(text='Miner Bot Status: 🔵 Online')
+        await bot.send_message(message.channel, embed=embed)  
+        
+    if message.content.startswith('/payment'):
+        embed=discord.Embed(title="***Miner Bot Payment**", description="Miner Bot cost 5$ and there is no refund⛏", color=0x1a94f0)
+        embed.set_author(name='Why choose Miner Bot? Because its fun and can make your server active! It can roast you and block words', icon_url="")
+        embed.add_field(name=":thumbsdown: The following is 100% prohibited:", value="Why? Because it protects it from getting it leaked", inline=True)
+        embed.set_footer(text='Thread posted by Captain#2713')
+        await bot.send_message(message.channel, embed=embed)           
+
       
-       
-           
-       
+    if message.content.startswith('/rules'):
+        embed=discord.Embed(title=":unamused: Do not @ping or direct message [DM] the Staff with unsolicited messages.", description="They are people too! Please treat them as such!  Besides, repeated distraction will only delay the next update.", color=0x1a94f0)
+        embed.set_author(name='***Server Rules***', icon_url="")
+        embed.add_field(name=":thumbsdown: The following is 100% prohibited:", value="Please respect the rules", inline=True)
+        embed.set_footer(text='Thread posted by Captain#2713')
+        await bot.send_message(message.channel, embed=embed)      
+        
+        
+    if message.content.startswith('/rules'):
+        embed=discord.Embed(title=":unamused: Do not @ping or direct message [DM] the Staff with unsolicited messages.", description="They are people too! Please treat them as such!  Besides, repeated distraction will only delay the next update.", color=0x1a94f0)
+        embed.set_author(name='***Server Rules***', icon_url="")
+        embed.add_field(name=":thumbsdown: The following is 100% prohibited:", value="Please respect the rules", inline=True)
+        embed.set_footer(text='Thread posted by Captain#2713')
+        await bot.send_message(message.channel, embed=embed)         
+
+    if message.content.startswith('/info'):
+        await bot.send_message(message.channel, "https://imgur.com/a/I5QIaEV")
+
+async def status_task():
+    while True:
+        await bot.change_presence(game=discord.Game(name="DM for help"))
 
 @bot.event
 async def on_ready():
-    print('sniper.py coded by unpredictable')
-    await bot.change_status(game=discord.Game(name=''))
+    print('Miner Bot™ @ coded by Captain#2713')
     print('------')
     print('INFO')
     print('------')
     print('Logged in as: ' + bot.user.name + ', ' + bot.user.id)
-     
+        
 bot.run(os.getenv('TOKEN'))
