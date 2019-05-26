@@ -8,12 +8,13 @@ class MyClient(discord.Client):
         print(self.user.id)
         print('------')
 
-    async def on_member_join(self, member):
-        guild = member.guild
-        if guild.system_channel is not None:
-            to_send = 'Welcome {0.mention} to {1.name}!'.format(member, guild)
-            await guild.system_channel.send(to_send)
+    async def on_message(self, message):
+        # we do not want the bot to reply to itself
+        if message.author.id == self.user.id:
+            return
 
+        if message.content.startswith('!hello'):
+            await message.channel.send('{0.author.mention} has been given Honarary Member :honararymember:'.format(message))
 
 client = MyClient()
 client.run(os.getenv('TOKEN'))
