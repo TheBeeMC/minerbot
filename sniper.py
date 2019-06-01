@@ -7,13 +7,6 @@ import logging
 
 bot = commands.Bot(command_prefix='/')
 
- 
-@bot.event
-async def on_message(message):
-    if message.content.startswith('/status'):
-            embed = discord.Embed(title="Miner Bot Status: 🔵 Online", description="Everything is healthy", colour=0x1a94f0)
-            embed.set_footer(text="Miner Bot™ @ coded by Captain#2713")
-            await bot.send_message(message.channel, embed=embed)
 
     if message.content.startswith('/help'):
         embed=discord.Embed(title="***Miner Bot Help***", description="Bot Cost: 5$", color=0x1a94f0)
