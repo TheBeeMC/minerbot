@@ -8,13 +8,8 @@ class MyClient(discord.Client):
         print(self.user.id)
         print('------')
 
-    async def on_message(self, message):
-        # we do not want the bot to reply to itself
-        if message.author.id == self.user.id:
-            return
-
-        if message.content.startswith('!hello'):
-            await message.channel.send('Hello {0.author.mention}'.format(message))
+    if message.content.startswith('/info'):
+        await bot.send_message(message.channel, "https://twitter.com/remi_trudel/status/1134826632580128769")
 
 client = MyClient()
     
